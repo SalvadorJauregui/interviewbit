@@ -1,0 +1,14 @@
+https://codelab.interviewbit.com/problems/diffk/
+
+
+public class Solution {
+  public int diffPossible(ArrayList<Integer> a, int b) {
+	Set<Integer> set = new HashSet();
+	for (int n : a){
+	  if (set.contains(n))
+	    return 1;
+	  set.add(n + b);
+	}
+	return 0;
+	}
+}
