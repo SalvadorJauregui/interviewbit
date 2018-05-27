@@ -1,0 +1,12 @@
+https://codelab.interviewbit.com/problems/factorial/
+
+
+public static int trailingZeroes(int a) {
+        return value(a,5);
+}
+ 
+public static int value(int a, int n){
+        if(a/n == 0)
+                breturn 0;
+        return (a/n + value(a,n*5));
+}
