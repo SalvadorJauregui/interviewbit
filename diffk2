@@ -1,0 +1,23 @@
+https://codelab.interviewbit.com/problems/diffk2/
+
+
+public class Solution {
+	public int diffPossible(final List<Integer> a, int b) {
+	    if (a.size() < 2)
+	        return 0;
+	    
+	    Set<Integer> set = new HashSet<>();
+	    
+	    for (int x : a){
+	        /* check for the complement exist */
+	        if (set.contains(x) == true)
+	            return 1;
+
+	        /* Add element and its complements */
+	        set.add(x + b);
+	        set.add(x - b);
+	    }
+	    /* pair was not found */
+	    return 0;
+	}
+}
