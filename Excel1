@@ -1,0 +1,35 @@
+https://codelab.interviewbit.com/problems/excel1/
+
+
+public class Solution {
+	public int titleToNumber(String a) {
+	    if (validateInputTittleToNumbre(a) == false)
+	        return -1;
+	    
+	    int number = 0, base = 1;
+	    final int BASE = 26;
+	    
+	    for (int i = a.length()-1; i >= 0; i--){
+	        number += (convertTittleToNumber(a.charAt(i)) * base);
+	        base*=BASE;
+	    }
+	    return number;
+	}
+  
+  
+  
+  
+	
+	public static boolean validateInputTittleToNumbre(String a){
+	    if (a == null){
+	        return false;
+	    }
+	    
+	    return true;
+	}
+	
+	public static int convertTittleToNumber(Character letter){
+	    /*Assuming any letter is Upper Case*/
+	    return (letter - 'A' + 1);
+	}
+}
