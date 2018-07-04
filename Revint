@@ -1,0 +1,28 @@
+
+https://codelab.interviewbit.com/problems/revint/
+
+public class Solution {
+	public int reverse(int a) {
+	    boolean negative = false;
+	    if (a < 0){
+	        negative = true;
+	        a*=(-1);
+	    }
+	    
+	    StringBuilder sb = new StringBuilder(String.valueOf(a));
+            
+        if (negative == true){
+            sb.append("-");
+        }
+                
+        return convertToInt(sb.reverse().toString());
+	}
+	
+	public static int convertToInt(String stringNumber){
+	    try{
+	        return Integer.parseInt(stringNumber);
+	    }catch (Exception e){
+	        return 0;
+	    }
+	}
+}
