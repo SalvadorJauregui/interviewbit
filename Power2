@@ -1,0 +1,25 @@
+https://codelab.interviewbit.com/problems/power2/
+
+Given a positive integer which fits in a 32 bit signed integer, find if it can be expressed as A^P where P > 1 and A > 0. A and P both should be integers.
+
+Example
+
+Input : 4
+Output : True  
+as 2^2 = 4. 
+
+public class Solution {
+    public boolean isPower(int number) {
+        int calc=0;
+        
+        for (int A = 1; A <= number; A++){
+            for (int P = 2; P <= 31; P++){
+                calc = (int)Math.pow((double)A,(double)P);
+                if (calc == number){
+                    return true;
+                }
+            }//for
+        }//for
+        return false;
+    }
+}
