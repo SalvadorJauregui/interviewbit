@@ -20,6 +20,7 @@ public class Solution {
 	for (int n : a){
 		if (set.contains(n))
 			return 1;
+		/* Add its complements */
 		set.add(n + b);
 	}
 	return 0;
