@@ -13,7 +13,6 @@ Output : YES
 
 as 5 - 1 = 4
 
-
 public class Solution {
 	public int diffPossible(ArrayList<Integer> a, int b) {
 	Set<Integer> set = new HashSet();
